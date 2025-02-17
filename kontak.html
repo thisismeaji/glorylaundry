@@ -42,50 +42,53 @@
         <main>
             <section>
                 <div class="kontakSection">
-                    <div class="left">
-                        <div class="text">
-                            <h1>Kontak Kami</h1>
-                            <p>Cara menghubungi kami untuk pertanyaan atau pemesanan layanan, biasanya kami akan membalas di hari yang sama.</p>  
-                        </div>
-                        <div class="menuKontak">
-                            <div>
-                                <img src="assets/images/telepon.png" alt="telepon">
-                                <p>+6287891955577</p>
-                            </div>
-                            <div>
-                                <img src="assets/images/email.png" alt="Email">
-                                <p>+admin@glorylaundry.com</p>
-                            </div>
-                            <div>
-                                <img src="assets/images/address.png" alt="address">
-                                <p>+Plaosan, RT 04/ RW 14, Purworejo</p>
-                            </div>
-                        </div>
+                  <div class="left">
+                    <div class="text">
+                      <h1>Kontak Kami</h1>
+                      <p>
+                        Cara menghubungi kami untuk pertanyaan atau pemesanan layanan,
+                        biasanya kami akan membalas di hari yang sama.
+                      </p>
                     </div>
-                    <div class="right">
-                        <div>
-                            <p>Nama :</p>
-                            <input></input>
-                        </div>
-                        <div>
-                            <p>Email :</p>
-                            <input></input>
-                        </div>
-                        <div>
-                            <p>No Hanpdhone :</p>
-                            <input></input>
-                        </div>
-                        <div>
-                            <p>Pesan :</p>
-                            <input></input>
-                        </div>
-                        <button>
-                            <p>Kirim pesan</p>
-                            <img src="assets/images/send.png" alt="send">
-                        </button>
+                    <div class="menuKontak">
+                      <div>
+                        <img src="assets/images/telepon.png" alt="telepon" />
+                        <p>+6287891955577</p>
+                      </div>
+                      <div>
+                        <img src="assets/images/email.png" alt="Email" />
+                        <p>admin@glorylaundry.com</p>
+                      </div>
+                      <div>
+                        <img src="assets/images/address.png" alt="address" />
+                        <p>Plaosan, RT 04/ RW 14, Purworejo</p>
+                      </div>
                     </div>
+                  </div>
+                  <div class="right">
+                    <div>
+                      <p>Nama :</p>
+                      <input id="nama" type="text" required/>
+                    </div>
+                    <div>
+                      <p>Email :</p>
+                      <input id="email" type="email" required/>
+                    </div>
+                    <div>
+                      <p>No Handphone :</p>
+                      <input id="nohp" type="tel" required/>
+                    </div>
+                    <div>
+                      <p>Pesan :</p>
+                      <textarea id="pesan" required></textarea>
+                    </div>
+                    <button onclick="kirimPesan()">
+                      <p>Kirim pesan</p>
+                      <img src="assets/images/send.png" alt="send" />
+                    </button>
+                  </div>
                 </div>
-            </section>
+              </section>
         </main>
         <footer>
             <div class="footer">
