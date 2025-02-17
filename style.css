@@ -1,738 +1,744 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
 }
 
 :root {
-    --background-color: #FBFBFE;
-    --primary-color: #DEDCFF;
-    --secondary-color: #433BFF;
-    --text-color: #1E1E1E;
-    --accent-color: #2F27CE;
-  
+  --background-color: #fbfbfe;
+  --primary-color: #dedcff;
+  --secondary-color: #433bff;
+  --text-color: #1e1e1e;
+  --accent-color: #2f27ce;
 }
-
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-body{
-    font-family: 'Poppins';
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
+body {
+  font-family: "Poppins";
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
 }
 
-.container{
-    width: 85rem;
-    max-width: 85rem;
+.container {
+  width: 85rem;
+  max-width: 85rem;
 }
 
 .no-scroll {
-    overflow: hidden;
-  }
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
 
 /* Header */
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-nav .logo{
-    z-index: 2;
+nav .logo {
+  z-index: 2;
 }
 
-nav .logo h1{
-    font-size: 1.2em;
+nav .logo h1 {
+  font-size: 1.2em;
 }
 
-nav > ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    list-style: none;
+nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
 }
 
-nav >  ul > li > a{
-    text-decoration: none;
-    color: var(--text-color);
+nav > ul > li > a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
-.menu{
-    display: none;
-    flex-direction: column;
-    gap: 7px;
-    z-index: 2;
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 7px;
+  z-index: 2;
 }
 
-.menu span{
-    display: inline-block;
-    width: 1.7rem;
-    height: 1px;
-    background-color: var(--text-color);
+.menu span {
+  display: inline-block;
+  width: 1.7rem;
+  height: 1px;
+  background-color: var(--text-color);
 }
 
-.navMobile{
-    position: absolute;
-    left: -100vw;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-    background-color: var(--background-color);
+.navMobile {
+  position: absolute;
+  left: -100vw;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--background-color);
 }
 
-.navMobile >  ul{
-    display: flex;
-    gap: 1.5rem;
-    flex-direction: column;
-    list-style: none;
+.navMobile > ul {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  list-style: none;
 }
 
-.navMobile > ul > li > a{
-    text-decoration: none;
-    color: var(--text-color);
+.navMobile > ul > li > a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
-.navMobileActive{
-    left: 0;
-    transition: all 0.3s ease-in-out;
-    background-color: var(--background-color);
+.navMobileActive {
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--background-color);
 }
 
 /* Hero Section */
 
-.hero{
-    padding: 15rem 1rem;
-    display: flex;
-    justify-content: space-between;
+.hero {
+  padding: 15rem 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-.heroText{
-    max-width: 45rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
+.heroText {
+  max-width: 45rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.heroText > h1{
-    font-size: 3em;
+.heroText > h1 {
+  font-size: 3em;
 }
 
-.heroText > h1 span:nth-of-type(1){
-    color: var(--accent-color);
+.heroText > h1 span:nth-of-type(1) {
+  color: var(--accent-color);
 }
 
-.heroText > h1 span:nth-of-type(2){
-    color: var(--background-color);
-    -webkit-text-stroke: 0.5px var(--text-color);
-    font-style: italic;
+.heroText > h1 span:nth-of-type(2) {
+  color: var(--background-color);
+  -webkit-text-stroke: 0.5px var(--text-color);
+  font-style: italic;
 }
 
-.heroText > p{
-    max-width: 40rem;
+.heroText > p {
+  max-width: 40rem;
 }
 
-.heroButton{
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+.heroButton {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.heroButton > button{
-    padding: 1rem 4rem;
-    border: none;
+.heroButton > button {
+  padding: 1rem 4rem;
+  border: none;
 }
 
-.heroButton > button:nth-of-type(1){
-    background-color: var(--primary-color);
-    color: var(--text-color);
+.heroButton > button:nth-of-type(1) {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
-.heroButton > button:nth-of-type(2){
-    background-color: var(--accent-color);
-    color: var(--background-color);
+.heroButton > button:nth-of-type(2) {
+  background-color: var(--accent-color);
+  color: var(--background-color);
 }
 
-.heroImages > img{
-    max-width: 27rem;
-    max-height: 19rem;
+.heroImages > img {
+  max-width: 27rem;
+  max-height: 19rem;
 }
 
 /* tentang Section */
 
-.tentangSection{
-    padding: 9rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.tentangSection {
+  padding: 9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.tentangText{
-    max-width: 600px;
+.tentangText {
+  max-width: 600px;
 }
 
-.tentangText > h1{
-    font-size: 3em;
-    margin-bottom: 1rem;
+.tentangText > h1 {
+  font-size: 3em;
+  margin-bottom: 1rem;
 }
 
-.cardSection{
-    background-color: var(--primary-color);
-    padding: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2rem;
-    flex-wrap: wrap;
-    border-radius: 5px;
-    width: 100%;
+.cardSection {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  width: 100%;
 }
 
-.cardSection > .card{
-    width: 260px;
-    max-width: 260px;
-    background-color: var(--background-color);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    border-radius: 5px;
+.cardSection > .card {
+  width: 260px;
+  max-width: 260px;
+  background-color: var(--background-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 5px;
 }
 
-.cardSection > .card h3{
-    color: var(--accent-color);
+.cardSection > .card h3 {
+  color: var(--accent-color);
 }
 
-.cardSection > .card p{
-    font-size: 0.9em;
-    max-width: 8rem;
+.cardSection > .card p {
+  font-size: 0.9em;
+  max-width: 8rem;
 }
 
 /* Layanan Section */
 
-.layananSection{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 9rem 1rem;
+.layananSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 9rem 1rem;
 }
 
-.layananText{
-    max-width: 700px;
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.layananText {
+  max-width: 700px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.layananText h1{
-    font-size: 3em;
+.layananText h1 {
+  font-size: 3em;
 }
 
-.cardLayanan{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 1rem;
+.cardLayanan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
 }
 
-.cardLayanan > .card{
-    max-width: 360px;
-    height: 246px;
-    padding: 1.5rem;
-    background-color: var(--primary-color);
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 3%;
+.cardLayanan > .card {
+  max-width: 360px;
+  height: 246px;
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 3%;
 }
 
 .cardLayanan > .card h3 {
-    background-color: transparent;
+  background-color: transparent;
 }
-
 
 .cardLayanan > .card p {
-    font-size: 14px;
-    background-color: transparent;
+  font-size: 14px;
+  background-color: transparent;
 }
 
-.cardLayanan > .card button{
-    width: 115px;
-    height: 35px;
-    background-color: var(--accent-color);
-    border: none;
-    color: var(--background-color);
-    font-size: 0.7em;
+.cardLayanan > .card button {
+  width: 115px;
+  height: 35px;
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--background-color);
+  font-size: 0.7em;
 }
 
-.testimoniSection{
-    padding: 9rem 1rem;
+.testimoniSection {
+  padding: 9rem 1rem;
 }
 
-.testimoniText{
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 2rem;
+.testimoniText {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 2rem;
 }
 
-.testimoniText h1{
-    font-size: 3em;
+.testimoniText h1 {
+  font-size: 3em;
 }
 
-.testimoniText p{
-    max-width: 750px;
+.testimoniText p {
+  max-width: 750px;
 }
 
-.testimoniCard{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+.testimoniCard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.card{
-    background-color: var(--primary-color);
-    padding: 2rem;
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 20rem;
+.card {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20rem;
 }
 
-.card p{
-    background-color: transparent;
+.card p {
+  background-color: transparent;
 }
 
 .card > h3 {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* Kontak Section */
 
-.kontakSection{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 9rem 1rem;
+.kontakSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9rem 1rem;
 }
 
-.kontakSection img{
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
+.kontakSection img {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
 }
 
-.kontakSection p{
-    background-color: transparent;
+.kontakSection p {
+  background-color: transparent;
 }
 
-.left{
-    width: 685px;
-    max-width: 685px;
-    border-right: 2px solid var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
+.left {
+  width: 685px;
+  max-width: 685px;
+  border-right: 2px solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
 
-
-.text{
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.text {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.text h1{
-    font-size: 3em;
+.text h1 {
+  font-size: 3em;
 }
 
-.menuKontak{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.menuKontak {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.menuKontak div{
-    background-color: var(--primary-color);
-    padding: 1rem 2rem ;
-    max-width: 370px;
-    display: flex;
-    gap: 1rem;
-    border: 5px;
+.menuKontak div {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  max-width: 370px;
+  display: flex;
+  gap: 1rem;
+  border: 5px;
 }
 
-.menuKontak div:nth-of-type(2){
-    background-color: var(--accent-color);
-    margin-left: 2rem;
-    color: var(--background-color);
+.menuKontak div:nth-of-type(2) {
+  background-color: var(--accent-color);
+  margin-left: 2rem;
+  color: var(--background-color);
 }
 
-.right{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.right div{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.right div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.right div input{
-    width: 424px;
-    max-width: 424px;
-    height: 50px;
-    background-color: var(--primary-color);
-    border: none;
+.right div input {
+  width: 100%;
+  max-width: 424px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 0 1rem;
 }
 
-
-.right div:nth-of-type(4) input{
-    height: 100px;
+.right div textarea {
+  width: 424px;
+  max-width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 1rem;
 }
 
-.right > button{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background-color: var(--accent-color);
-    height: 60px;
-    color: var(--background-color);
-    border: none;
+.right div:nth-of-type(4) input {
+  height: 100px;
+}
+
+.right > button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--accent-color);
+  height: 60px;
+  color: var(--background-color);
+  border: none;
 }
 
 /* Footer */
 
-.footer{
-    margin-top: 4rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footer {
+  margin-top: 4rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer img{
-    background-color: transparent;
+.footer img {
+  background-color: transparent;
 }
 
-.mediaSosial{
-    display: flex;
-    gap: 5px;
+.mediaSosial {
+  display: flex;
+  gap: 5px;
 }
 
-.mediaSosial div{
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
+.mediaSosial div {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
 }
-
 
 @media screen and (max-width: 576px) {
+  nav > ul {
+    display: none;
+  }
 
-    nav > ul{
-        display: none;
-    }
+  .menu {
+    display: flex;
+  }
 
-    .menu{
-        display: flex;
-    }
+  .navMobile {
+    display: flex;
+  }
 
-    .navMobile{
-        display: flex;
-    }
+  nav .logo h1 {
+    font-size: 1em;
+  }
 
-    nav .logo h1{
-        font-size: 1em;
-    }
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem 1rem;
+  }
 
-    .hero{
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        padding: 5rem 1rem;
-    }
+  .heroText > h1 {
+    font-size: 1.7em;
+  }
 
-    .heroText > h1{
-        font-size: 1.7em;
-    }
+  .heroText > p {
+    font-size: 0.8em;
+  }
 
-    .heroText > p{
-        font-size: 0.8em;
-    }
+  .heroButton > button {
+    padding: 0.9rem 2.5rem;
+  }
 
-    .heroButton > button{
-        padding: 0.9rem 2.5rem;
-    }
+  .heroImages > img {
+    max-width: 18rem;
+    max-height: 13rem;
+  }
 
-    .heroImages > img{
-        max-width: 18rem;
-        max-height: 13rem;
-    }
+  /* Tentang Section */
 
-    /* Tentang Section */
+  .tentangSection {
+    padding: 5rem 1rem;
+  }
 
-    .tentangSection{
-        padding: 5rem 1rem;
-    }
+  .tentangText > h1 {
+    font-size: 1.7em;
+  }
 
-    .tentangText > h1{
-        font-size: 1.7em;
-    }
+  .tentangText > p {
+    font-size: 0.8em;
+  }
 
-    .tentangText > p{
-        font-size: 0.8em;
-    }
+  .cardSection .card p {
+    font-size: 0.8em;
+    max-width: 8rem;
+  }
 
-    .cardSection .card p{
-        font-size: 0.8em;
-        max-width: 8rem;
-    }
+  /* Layanan Section */
 
-    /* Layanan Section */
+  .layananSection {
+    padding: 5rem 1rem;
+  }
 
-    .layananSection{
-        padding: 5rem 1rem;
-    }
+  .layananText > h1 {
+    font-size: 1.7em;
+  }
 
-    .layananText > h1{
-        font-size: 1.7em;
-    }
+  .layananText > p {
+    font-size: 0.8em;
+  }
 
-    .layananText > p{
-        font-size: 0.8em;
-    }
+  .cardLayanan .card {
+    gap: 1rem;
+    justify-content: center;
+  }
 
-    .cardLayanan .card{
-        gap: 1rem;
-        justify-content: center;
-    }
+  .cardLayanan .card h3 {
+    font-size: 1em;
+  }
 
-    .cardLayanan .card h3{
-        font-size: 1em;
-    }
+  .cardLayanan .card p {
+    font-size: 0.8em;
+  }
 
-    .cardLayanan .card p{
-        font-size: 0.8em;
-    }
+  /* Testimoni */
 
-    /* Testimoni */
+  .testimoniSection {
+    padding: 5rem 1rem;
+  }
 
-    .testimoniSection{
-        padding: 5rem 1rem;
-    }
+  .testimoniText > h1 {
+    font-size: 1.7em;
+  }
 
-    .testimoniText > h1{
-        font-size: 1.7em;
-    }
+  .testimoniText > p {
+    font-size: 0.8em;
+  }
 
-    .testimoniText > p{
-        font-size: 0.8em;
-    }
+  .card {
+    padding: 2rem;
+  }
 
-    .card{
-        padding: 2rem;
-    }
+  .card p {
+    font-size: 0.8em;
+  }
 
-    .card p{
-        font-size: 0.8em;
-    }
+  .card h3 {
+    font-size: 1em;
+  }
 
-    .card h3{
-        font-size: 1em;
-    }
+  /* Kontak Section */
 
-    /* Kontak Section */
+  .kontakSection {
+    padding: 5rem 1rem;
+    flex-direction: column;
+    gap: 4rem;
+  }
 
-    .kontakSection{
-        padding: 5rem 1rem;
-        flex-direction: column;
-        gap: 4rem;
-    }
+  .kontakSection button {
+    cursor: pointer;
+  }
 
-    .left{
-        border-right: none;
-        width: 100%;
-    }
+  .left {
+    border-right: none;
+    width: 100%;
+  }
 
-    .menuKontak div{
-        padding: 1rem;
-    }
+  .menuKontak div {
+    padding: 1rem;
+  }
 
-    .text h1{
-        font-size: 1.7em;
-    }
+  .text h1 {
+    font-size: 1.7em;
+  }
 
-    .text p{
-        font-size: 0.8em;
-    }
+  .text p {
+    font-size: 0.8em;
+  }
 
-    .right{
-        width: 100%;
-    }
+  .right {
+    width: 100%;
+  }
 
-    .right div input{
-        width: 100%;
-    }
+  .right div input {
+    width: 100%;
+  }
 
-    .menuKontak div{
-        align-items: center;
-    }
+  .menuKontak div {
+    align-items: center;
+  }
 
-    .menuKontak div p{
-        font-size: 0.8em;
-    }
+  .menuKontak div p {
+    font-size: 0.8em;
+  }
 
-    .right div p{
-        font-size: 0.8em;
-    }
-
+  .right div p {
+    font-size: 0.8em;
+  }
 }
 
-@media screen and (min-width: 576px) and (max-width:768px){
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  nav {
+    padding: 1.5rem;
+  }
 
-    nav{
-        padding: 1.5rem;
-    }
+  nav > ul {
+    display: none;
+  }
 
-    nav > ul{
-        display: none;
-    }
-    
-    .menu{
-        display: flex;
-    }
+  .menu {
+    display: flex;
+  }
 
-    .navMobile{
-        display: flex;
-    }
+  .navMobile {
+    display: flex;
+  }
 
-    .navMobile > ul > li > a{
-        font-size: 1.1em;
-    }
+  .navMobile > ul > li > a {
+    font-size: 1.1em;
+  }
 
-    .hero{
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        padding: 5rem 1.5rem;
-        gap: 5rem;
-    }
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1.5rem;
+    gap: 5rem;
+  }
 
-    .tentangSection{
-        padding: 5rem 1.5rem;
-    }
+  .tentangSection {
+    padding: 5rem 1.5rem;
+  }
 
-    .layananSection{
-        padding: 5rem 1.5rem;
-    }
+  .layananSection {
+    padding: 5rem 1.5rem;
+  }
 
-    .testimoniSection{
-        padding: 5rem 1.5rem;
-    }
+  .testimoniSection {
+    padding: 5rem 1.5rem;
+  }
 
-    .kontakSection{
-        padding: 5rem 1.5rem;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 4rem;
-    }
+  .kontakSection {
+    padding: 5rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+  }
 
-    .left{
-        width: 100%;
-        border-right: none;
-    }
-    
+  .left {
+    width: 100%;
+    border-right: none;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width:1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    padding: 2rem;
+  }
 
-    nav{
-        padding: 2rem;
-    }
+  nav > ul {
+    display: none;
+  }
 
+  .menu {
+    display: flex;
+  }
 
-    nav > ul{
-        display: none;
-    }
-    
-    .menu{
-        display: flex;
-    }
+  .navMobile {
+    display: flex;
+  }
 
-    .navMobile{
-        display: flex;
-    }
+  .navMobile > ul > li > a {
+    font-size: 1.3em;
+  }
 
-    .navMobile > ul > li > a{
-        font-size: 1.3em;
-    }
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    gap: 5rem;
+  }
 
-    .hero{
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        padding: 5rem 2rem;
-        gap: 5rem;
-    }
+  .tentangSection {
+    padding: 5rem 2rem;
+  }
 
-    .tentangSection{
-        padding: 5rem 2rem;
-    }
+  .layananSection {
+    padding: 5rem 2rem;
+  }
 
-    .layananSection{
-        padding: 5rem 2rem;
-    }
+  .testimoniSection {
+    padding: 5rem 2rem;
+  }
 
-    .testimoniSection{
-        padding: 5rem 2rem;
-    }
+  .kontakSection {
+    padding: 5rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+  }
 
-    .kontakSection{
-        padding: 5rem 2rem;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 4rem;
-    }
-
-    .left{
-        width: 100%;
-        border-right: none;
-    }
+  .left {
+    width: 100%;
+    border-right: none;
+  }
 }
